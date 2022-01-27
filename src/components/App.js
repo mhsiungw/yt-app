@@ -3,6 +3,7 @@ import youtube from '../apis/youtube'
 import SearchBar from './SearchBar'
 import VideoList from './VideoList'
 import VideoDetail from './VideoDetail'
+import '../stylesheets/App.css'
 
 class App extends React.Component {
     state = { videos: [], selectedVideo: null }
@@ -26,16 +27,17 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="ui container">
-                <SearchBar onFormSubmit={this.onFormSubmit} />
-                <div className="ui grid">
-                    <div className="row">
-                        <div className="eleven wide column">
-                            <VideoDetail video={this.state.selectedVideo} />
-                        </div>
-                        <div className="five wide column">
-                            <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
-                        </div>
+            <div className="container">
+                <div className="search-bar">
+                    <SearchBar onFormSubmit={this.onFormSubmit} />
+                </div>
+
+                <div className="video-display">
+                    <div className="video-detail">
+                        <VideoDetail video={this.state.selectedVideo} />
+                    </div>
+                    <div className="video-list">
+                        <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
                     </div>
                 </div>
             </div>

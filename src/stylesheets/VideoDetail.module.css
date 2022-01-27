@@ -1,0 +1,13 @@
+.video-detail {
+    width: 900px;
+    height: 600px;
+}
+
+.video-detail iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.video-detail .info {
+    color: #fff;
+}
