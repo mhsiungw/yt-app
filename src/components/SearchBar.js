@@ -1,4 +1,8 @@
 import React from 'react'
+
+import {connect} from 'react-redux'
+import {fetchVideos} from '../actions'
+
 import '../stylesheets/SearchBar.css'
 
 class SearchBar extends React.Component {
@@ -10,7 +14,7 @@ class SearchBar extends React.Component {
 
     onFormSubmit = (e) => {
         e.preventDefault()
-        this.props.onFormSubmit(this.state.term)
+        this.props.fetchVideos(this.state.term)
     }
 
     render() {
@@ -18,11 +22,11 @@ class SearchBar extends React.Component {
             <form onSubmit={this.onFormSubmit}>
                 <input onChange={this.onInputChange} type="text" />
                 <button>
-                    <i class="search icon" />
+                    <i className="search icon" />
                 </button>
             </form>
         )
     }
 }
 
-export default SearchBar
+export default connect(null,{fetchVideos})(SearchBar)

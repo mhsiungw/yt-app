@@ -1,9 +1,22 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+
+import {connect} from 'react-redux'
+import {fetchVideos, selectVideo} from '../actions'
+
 import VideoItem from './VideoItem'
 
-const VideoList = ({ videos, onVideoSelect }) => {
-    const renderedList = videos.map((video) => <VideoItem onVideoSelect={onVideoSelect} video={video} />)
+const VideoList = ({videos, fetchVideos, selectVideo}) => {
+    useEffect(() => {
+        fetchVideos('buildings')
+    }, [])
+
+    const renderedList = videos.map((video) => <VideoItem key={video.id.videoId} video={video} selectVideo={selectVideo}/>)
     return <div>{renderedList}</div>
 }
 
-export default VideoList
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {videos: state.videos}
+}
+
+export default connect(mapStateToProps, {fetchVideos, selectVideo})(VideoList)

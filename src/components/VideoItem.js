@@ -1,11 +1,12 @@
 import '../stylesheets/VideoItem.css'
 import React from 'react'
 
-const VideoItem = ({ video, onVideoSelect }) => {
+
+const VideoItem = ({ video, selectVideo }) => {
     return (
         <div
             onClick={() => {
-                onVideoSelect(video)
+                selectVideo(video)
             }}
             key={video.id.videoId}
             className="video-item"

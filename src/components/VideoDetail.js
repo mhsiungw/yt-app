@@ -1,20 +1,27 @@
 import React from 'react'
+
+import {connect} from 'react-redux'
+
 import styles from '../stylesheets/VideoDetail.module.css'
 
-const VideoDetail = ({ video }) => {
-    if (!video) {
+const VideoDetail = ({ selectedVideo }) => {
+    if (selectedVideo) {
         return <div style={{ color: '#fff' }}>Loading...</div>
     }
-    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
+    const videoSrc = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`
     return (
         <div className={styles['video-detail']}>
             <iframe title="video-player" src={videoSrc} />
             <div className={styles['info']}>
-                <h4>{video.snippet.title}</h4>
-                <p>{video.snippet.description}</p>
+                <h4>{selectedVideo.snippet.title}</h4>
+                <p>{selectedVideo.snippet.description}</p>
             </div>
         </div>
     )
 }
 
-export default VideoDetail
+const mapStateToProps = (state) => {
+    return {selectedVideo: state.selectedVideo}
+}
+
+export default connect(mapStateToProps)(VideoDetail)
