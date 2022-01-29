@@ -1,9 +1,9 @@
 import React from 'react'
 
 import {connect} from 'react-redux'
-import {fetchVideos} from '../actions'
+import {fetchVideos} from '../../actions'
 
-import '../stylesheets/SearchBar.css'
+import '../../stylesheets/SearchBar.css'
 
 class SearchBar extends React.Component {
     state = { term: '' }

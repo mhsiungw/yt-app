@@ -1,11 +1,12 @@
 import React from 'react'
 
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import { fetchVideos } from '../../actions'
 
-import styles from '../stylesheets/VideoDetail.module.css'
+import styles from '../../stylesheets/VideoDetail.module.css'
 
 const VideoDetail = ({ selectedVideo }) => {
-    if (selectedVideo) {
+    if (!selectedVideo) {
         return <div style={{ color: '#fff' }}>Loading...</div>
     }
     const videoSrc = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`
@@ -21,7 +22,7 @@ const VideoDetail = ({ selectedVideo }) => {
 }
 
 const mapStateToProps = (state) => {
-    return {selectedVideo: state.selectedVideo}
+    return { selectedVideo: state.selectedVideo }
 }
 
-export default connect(mapStateToProps)(VideoDetail)
+export default connect(mapStateToProps, { fetchVideos })(VideoDetail)

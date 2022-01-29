@@ -1,25 +1,19 @@
 import React from 'react'
-import SearchBar from './SearchBar'
-import VideoList from './VideoList'
-import VideoDetail from './VideoDetail'
+import Videos from './Videos/Videos'
+import NotFound from './NotFound'
 
-import '../stylesheets/App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
-                <div className="search-bar">
-                    <SearchBar/>
-                </div>
-                <div className="video-display">
-                    <div className="video-detail">
-                        <VideoDetail/>
-                    </div>
-                    <div className="video-list">
-                        <VideoList/>
-                    </div>
-                </div>
+            <div>
+                <BrowserRouter>
+                    <Routes>
+                        <Route exact path="/" element={<Videos />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </BrowserRouter>
             </div>
         )
     }
