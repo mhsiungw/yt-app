@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { connect } from 'react-redux'
-import { fetchVideos } from '../../actions'
 
 import styles from '../../stylesheets/VideoDetail.module.css'
 
@@ -25,4 +24,4 @@ const mapStateToProps = (state) => {
     return { selectedVideo: state.selectedVideo }
 }
 
-export default connect(mapStateToProps, { fetchVideos })(VideoDetail)
+export default connect(mapStateToProps)(VideoDetail)
