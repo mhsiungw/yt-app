@@ -1,8 +1,7 @@
-import {combineReducers} from 'redux'
-import {fetchVideosReducer, selectVideoReducer} from './videos'
-
+import { combineReducers } from 'redux'
+import { fetchVideosReducer, selectVideoReducer } from './videoReducers'
 
 export default combineReducers({
-  videos: fetchVideosReducer,
-  selectedVideo: selectVideoReducer
+    videos: fetchVideosReducer,
+    selectedVideo: selectVideoReducer,
 })
