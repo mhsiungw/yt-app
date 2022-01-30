@@ -2,6 +2,8 @@ import React from 'react'
 import SearchBar from './SearchBar'
 import VideoDetail from './VideoDetail'
 import VideoList from './VideoList'
+import GoogleAuth from '../GoogleAuth'
+import ShowUser from './ShowUser'
 
 import '../../stylesheets/Videos.css'
 
@@ -10,14 +12,16 @@ class Videos extends React.Component {
         return (
             <div className="container">
                 <div className="search-bar">
-                    <SearchBar/>
+                    <ShowUser />
+                    <SearchBar />
+                    <GoogleAuth />
                 </div>
                 <div className="video-display">
                     <div className="video-detail">
-                        <VideoDetail/>
+                        <VideoDetail />
                     </div>
                     <div className="video-list">
-                        <VideoList/>
+                        <VideoList />
                     </div>
                 </div>
             </div>
@@ -25,4 +29,4 @@ class Videos extends React.Component {
     }
 }
 
-export default Videos 
+export default Videos

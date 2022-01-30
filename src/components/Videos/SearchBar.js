@@ -1,7 +1,7 @@
 import React from 'react'
 
-import {connect} from 'react-redux'
-import {fetchVideos} from '../../actions'
+import { connect } from 'react-redux'
+import { fetchVideos } from '../../actions'
 
 import '../../stylesheets/SearchBar.css'
 
@@ -29,4 +29,4 @@ class SearchBar extends React.Component {
     }
 }
 
-export default connect(null,{fetchVideos})(SearchBar)
+export default connect(null, { fetchVideos })(SearchBar)

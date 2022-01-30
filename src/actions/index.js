@@ -1,9 +1,9 @@
 import { SIGN_IN, SIGN_OUT, FETCH_VIDEOS, SELECT_VIDEO } from './types.js'
 import youtube from '../apis/youtube'
-export const signIn = (userId) => {
+export const signIn = ({ userId, userName }) => {
     return {
         type: SIGN_IN,
-        payload: userId,
+        payload: { userId, userName },
     }
 }
 
