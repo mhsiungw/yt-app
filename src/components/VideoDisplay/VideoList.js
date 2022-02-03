@@ -20,7 +20,7 @@ class VideoList extends React.Component {
         ))
     }
     render() {
-        return <div>{this.renderedList()}</div>
+        return <div className="video-list">{this.renderedList()}</div>
     }
 }
 

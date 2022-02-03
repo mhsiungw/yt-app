@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { connect } from 'react-redux'
-import { signIn, signOut } from '../actions'
+import { signIn, signOut } from '../../actions'
 
 class GoogleAuth extends React.Component {
     componentDidMount() {
@@ -43,22 +43,21 @@ class GoogleAuth extends React.Component {
             return (
                 <button onClick={this.onSignOutClick} className="ui red google button">
                     <i className="google icon" />
-                    Sign Out
+                    <span>Sign Out</span>
                 </button>
             )
         } else {
             return (
                 <button onClick={this.onSignInClick} className="ui red google button">
                     <i className="google icon" />
-                    Sign In with Google
+                    <span>Sign In with Google</span>
                 </button>
             )
         }
     }
 
     render() {
-        console.log(this.props)
-        return <React.Fragment>{this.renderAuthButton()}</React.Fragment>
+        return <div className="google-auth">{this.renderAuthButton()}</div>
     }
 }
 

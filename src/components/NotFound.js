@@ -15,7 +15,7 @@ const NotFound = () => {
 
 const style = {
     color: 'white',
-    'text-align': 'center',
+    textAlign: 'center',
 }
 
 export default NotFound

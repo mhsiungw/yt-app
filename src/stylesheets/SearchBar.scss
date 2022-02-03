@@ -1,0 +1,57 @@
+.search-bar {
+    min-width: 650px;
+    background-color: #212121;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    .show-user {
+        color: #e6e6e6;
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        input {
+            border: none;
+            background-color: #121212;
+            height: 40px;
+            flex: 1;
+        }
+        button {
+            background-color: #323232;
+            height: 40px;
+            width: 50px;
+            border: none;
+            i {
+                color: #e6e6e6;
+                margin: 0;
+            }
+        }
+    }
+    .google-auth {
+        button {
+            margin: 0;
+            span {
+                color: #e6e6e6;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .search-bar {
+        .google-auth {
+            button {
+                i.google.icon {
+                    margin: 0 !important;
+                }
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}

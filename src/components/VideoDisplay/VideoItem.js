@@ -1,6 +1,4 @@
-import '../../stylesheets/VideoItem.css'
 import React from 'react'
-
 
 const VideoItem = ({ video, selectVideo }) => {
     return (

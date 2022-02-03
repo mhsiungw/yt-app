@@ -1,5 +1,5 @@
 import React from 'react'
-import Videos from './Videos/Videos'
+import Videos from './Videos'
 import NotFound from './NotFound'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'

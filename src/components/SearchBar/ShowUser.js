@@ -3,7 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const ShowUser = (props) => {
-    return <span>Hi {props.userName || 'Strangers'}</span>
+    return <span className="show-user">Hi {props.userName || 'Strangers'}</span>
 }
 
 const mapStateToProps = (state) => {
