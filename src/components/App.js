@@ -10,7 +10,7 @@ class App extends React.Component {
             <div>
                 <BrowserRouter>
                     <Routes>
-                        <Route exact path="/" element={<Videos />} />
+                        <Route path="/" element={<Videos />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </BrowserRouter>
