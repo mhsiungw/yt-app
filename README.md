@@ -23,7 +23,7 @@ npm i
 ```
 
 ```
-mpm run start
+npm run start
 ```
 
 The app will then start running at localhost:3000
