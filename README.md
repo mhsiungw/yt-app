@@ -4,7 +4,13 @@
 
 A web app making use of [Youtube API](https://developers.google.com/youtube/v3/docs/search/list) and React.js.
 
-[Demo website](https://agitated-heyrovsky-cc2b05.netlify.app/)
+<br/>
+
+## Demo website
+
+https://agitated-heyrovsky-cc2b05.netlify.app/
+
+<br/>
 
 ## To start the project locally
 
